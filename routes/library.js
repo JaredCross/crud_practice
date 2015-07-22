@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var db = require('monk')('localhost/library2' || process.env.MONGOLAB_URI);
+var db = require('monk')(process.env.MONGOLAB_URI || 'localhost/library2'  );
 var libraryCollection = db.get('library');
 
 router.get('/library', function (req, res, next) {
