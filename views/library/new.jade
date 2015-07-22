@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+  div.header
+    h1 Enter a new book below!
+  div
+    form(action='/library' method='post')
+      include ../../includes/form.jade
+      div
+        input(type='submit' value='Add Book')

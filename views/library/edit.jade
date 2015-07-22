@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+  div.header
+    h1 Edit Book Info Below
+  div
+    form(action='/library/' + record._id method='post')
+      include ../../includes/form.jade
+      div
+        input(type='submit' value='Update info')
+  div
+    form(action='/library/' + record._id + '/delete' method='post')
+      div
+        input(type='submit' value='Delete Book')
+  div
+    a(href='/library/' + record._id) Cancel

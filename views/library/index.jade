@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+  div.header
+    h1 The Library Is Open
+  div
+    a(href='/library/new') click here to add a new book
+  div
+    h3 Books Currently In The Library
+  div
+    if(record)
+      ul
+        each book in record
+         li
+           a(href='/library/' + book._id) #{book.title}
