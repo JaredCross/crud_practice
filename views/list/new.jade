@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+  div.header
+    h1 Enter the Person Information Below
+  div
+    form(action='/list' method='post')
+      include ../../includes/form.jade
+      div
+        input(type='submit' value='Add Person')
+  div
+    a(href='/list') Cancel
+  include ../../includes/errorMessages.jade

@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+  div.header
+    h1 Showing information for #{data.firstName} #{data.lastName}
+  div
+    p First Name: #{data.firstName}
+    p Last Name: #{data.lastName}
+    p Email: #{data.email}
+  div
+    a(href='/list/' + data._id + '/edit') Go to Edit or delete
+  div
+    a(href='/list') Go Back

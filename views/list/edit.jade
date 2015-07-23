@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+  div.header
+    h1 Edit the person's information Below
+  div
+    form(action='/list/' + data._id method='post')
+      include ../../includes/form.jade
+      div
+        input(type='submit' value='Submit Update')
+  div
+    p Delete instead?
+    form(action='/list/' + data._id + '/delete' method='post')
+      input(type='submit' value='Delete Person')
+  div
+    a(href='/list/' + data._id) Go Back
+  include ../../includes/errorMessages.jade

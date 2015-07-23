@@ -1,6 +1,9 @@
 div
-  label(for='title') Title:
-  input(type='text' id='title' name='title' value=(record)? '#{record.title}':'')
+  label(for='first-name') First Name: 
+  input(type='text' id='first-name' name='first_name' value=(data)? '#{data.firstName}': '')
 div
-  label(for='author') Author:
-  input(type='text' id='author' name='author' value=(record)? '#{record.author}':'')
+  label(for='last-name') Last Name: 
+  input(type='text' id='last-name' name='last_name' value=(data)? '#{data.lastName}': '')
+div
+  label(for='email') Email:
+  input(type='text' id='email' name='email' value=(data)? '#{data.email}': '')
